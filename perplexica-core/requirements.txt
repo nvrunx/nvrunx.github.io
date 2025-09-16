@@ -1,0 +1,163 @@
+# PerplexicaCore AI-Augmented Search Engine Requirements
+# ================================================================
+
+# Core Framework and Task Queue
+celery==5.3.4                    # Distributed task queue for microservices
+redis==5.0.1                     # Redis client for caching and task results
+kombu==5.3.4                     # Messaging library for Celery
+
+# Async HTTP and Web Scraping
+httpx==0.25.2                    # Async HTTP client for web requests
+aiohttp==3.9.1                   # Alternative async HTTP client
+requests==2.31.0                 # Synchronous HTTP requests (fallback)
+
+# Content Extraction and Processing
+trafilatura==1.6.4               # Advanced web content extraction
+readability-lxml==0.8.1          # Content extraction using readability algorithm
+beautifulsoup4==4.12.2           # HTML parsing and manipulation
+lxml==4.9.3                      # Fast XML and HTML parser
+html5lib==1.1                    # Pure-python HTML5 parser
+
+# Natural Language Processing and AI
+sentence-transformers==2.2.2     # Sentence embeddings for semantic similarity
+torch==2.1.1                     # PyTorch for deep learning models
+transformers==4.36.2             # Hugging Face transformers library
+scikit-learn==1.3.2              # Machine learning utilities
+numpy==1.24.4                    # Numerical computing
+pandas==2.1.4                    # Data manipulation and analysis
+
+# Text Processing
+nltk==3.8.1                      # Natural language toolkit
+spacy==3.7.2                     # Advanced NLP library
+textstat==0.7.3                  # Text statistics and readability
+
+# LLM Integration
+openai==1.3.9                    # OpenAI API client
+anthropic==0.7.8                 # Anthropic Claude API client (optional)
+
+# Web Standards and Compliance
+urllib3==2.1.0                   # HTTP library with connection pooling
+urllib-robotparser==1.0.0        # Robots.txt parser
+fake-useragent==1.4.0            # Dynamic user agent generation
+
+# Data Validation and Serialization
+pydantic==2.5.2                  # Data validation and settings management
+marshmallow==3.20.1              # Object serialization/deserialization
+jsonschema==4.20.0               # JSON schema validation
+
+# Monitoring and Logging
+structlog==23.2.0                # Structured logging
+prometheus-client==0.19.0        # Prometheus monitoring integration
+python-json-logger==2.0.7        # JSON formatted logging
+
+# Configuration and Environment
+python-dotenv==1.0.0             # Environment variable loading
+click==8.1.7                     # Command line interface creation
+pyyaml==6.0.1                    # YAML configuration file support
+
+# Performance and Optimization
+uvloop==0.19.0                   # Fast asyncio event loop (Unix only)
+cchardet==2.1.7                  # Character encoding detection
+charset-normalizer==3.3.2        # Character encoding normalization
+
+# Testing and Development (Optional)
+pytest==7.4.3                    # Testing framework
+pytest-asyncio==0.21.1           # Async testing support
+pytest-mock==3.12.0              # Mocking utilities for tests
+pytest-cov==4.1.0                # Coverage reporting
+black==23.11.0                   # Code formatter
+flake8==6.1.0                    # Code linting
+mypy==1.7.1                      # Type checking
+
+# Security and Cryptography
+cryptography==41.0.8             # Cryptographic recipes and primitives
+certifi==2023.11.17              # Certificate bundle
+
+# Database (Optional - for result storage)
+sqlalchemy==2.0.23               # SQL toolkit and ORM
+psycopg2-binary==2.9.9           # PostgreSQL adapter
+sqlite3                          # SQLite (built-in)
+
+# Jupyter and Colab Support
+jupyter==1.0.0                   # Jupyter notebook
+ipython==8.18.1                  # Interactive Python shell
+nest-asyncio==1.5.8              # Nested async support for Jupyter
+
+# Additional Utilities
+tqdm==4.66.1                     # Progress bars
+python-dateutil==2.8.2           # Date/time utilities
+pytz==2023.3                     # Timezone support
+packaging==23.2                  # Package version utilities
+
+# Memory and Resource Management
+psutil==5.9.6                    # System and process utilities
+memory-profiler==0.61.0          # Memory usage profiling
+
+# Data Processing and Analytics
+scipy==1.11.4                    # Scientific computing
+matplotlib==3.8.2                # Plotting library (optional)
+seaborn==0.13.0                  # Statistical visualization (optional)
+
+# Async Database Drivers (Optional)
+asyncpg==0.29.0                  # Async PostgreSQL driver
+aiosqlite==0.19.0                # Async SQLite driver
+
+# Version Constraints and Compatibility Notes:
+# - torch: Pin to avoid compatibility issues with transformers
+# - sentence-transformers: Requires specific torch version
+# - numpy: Compatible version for all scientific packages
+# - celery: Latest stable with Redis support
+# - httpx: Async HTTP client with excellent performance
+# - trafilatura: Best-in-class content extraction
+# - openai: Latest API client with all features
+
+# Platform-specific packages (uncomment if needed):
+# pywin32==306                    # Windows-specific utilities (Windows only)
+# python-magic==0.4.27           # File type detection (Linux/Mac)
+
+# GPU Support (uncomment for CUDA acceleration):
+# torch-audio==2.1.1+cu118       # GPU-accelerated audio processing
+# torchvision==0.16.1+cu118      # GPU-accelerated computer vision
+
+# Alternative/Additional LLM Libraries:
+# langchain==0.0.350             # LLM application framework
+# llama-cpp-python==0.2.20       # Local LLaMA model support
+# guidance==0.1.8                # Controlled generation for LLMs
+
+# Search Engine Alternatives (if not using SearxNG):
+# duckduckgo-search==3.9.6       # DuckDuckGo search API
+# googlesearch-python==1.2.3     # Google search (unofficial)
+# serper==0.1.1                  # Serper search API
+
+# Advanced Features (Optional):
+# faiss-cpu==1.7.4               # Facebook AI Similarity Search
+# chromadb==0.4.18               # Vector database for embeddings
+# weaviate-client==3.25.3        # Weaviate vector database client
+# pinecone-client==2.2.4         # Pinecone vector database client
+
+# Monitoring and Observability (Production):
+# sentry-sdk==1.38.0             # Error tracking and monitoring
+# datadog==0.48.0                # Datadog monitoring integration
+# newrelic==9.2.0                # New Relic monitoring
+
+# API Framework (if building REST API):
+# fastapi==0.104.1               # Modern async web framework
+# uvicorn==0.24.0                # ASGI server for FastAPI
+# gunicorn==21.2.0               # WSGI server for production
+
+# Message Queue Alternatives:
+# pika==1.3.2                    # RabbitMQ client (alternative to kombu)
+# kafka-python==2.0.2            # Apache Kafka client
+# azure-servicebus==7.11.4       # Azure Service Bus client
+
+# Cloud Storage (Optional):
+# boto3==1.34.0                  # AWS SDK
+# google-cloud-storage==2.10.0   # Google Cloud Storage
+# azure-storage-blob==12.19.0    # Azure Blob Storage
+
+# Deployment and Containerization:
+# docker==6.1.3                  # Docker SDK for Python
+# kubernetes==28.1.0             # Kubernetes client
+
+# Note: Some packages may have different names or versions in certain environments.
+# Always verify compatibility with your specific Python version and platform.
